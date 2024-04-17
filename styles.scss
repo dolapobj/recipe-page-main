@@ -1,0 +1,179 @@
+// Fonts
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Young+Serif:wght@400&display=swap");
+
+$font-family-outfit: "Outfit", sans-serif;
+$font-family-young-serif: "Young Serif", serif;
+
+// Colors
+$primary-color-nutmeg: hsl(14, 45%, 36%);
+$primary-color-dark-raspberry: hsl(332, 51%, 32%);
+
+$neutral-color-white: hsl(0, 0%, 100%);
+$neutral-color-rose-white: hsl(330, 100%, 98%);
+$neutral-color-eggshell: hsl(30, 54%, 90%);
+$neutral-color-light-grey: hsl(30, 18%, 87%);
+$neutral-color-wenge-brown: hsl(30, 10%, 34%);
+$neutral-color-dark-charcoal: hsl(24, 5%, 18%);
+
+//Margins
+$margin: 30px;
+$padding: 30px;
+
+//BreakPoints
+$breakpoint-mobile: 375px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+
+html {
+    
+  @media (min-width: $breakpoint-tablet) {
+    background-color: $neutral-color-eggshell;
+  }
+}
+body {
+  margin: 0;
+  min-width: 300px;
+  
+}
+hr {
+  width: 85%;
+  background-color: $neutral-color-light-grey;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: $margin;
+  margin-bottom: $margin;
+  border: none;
+  height: 1px;
+}
+ol li::marker {
+  color: $primary-color-nutmeg;
+  font-weight: bold;
+}
+li {
+  margin-bottom: 10px;
+  color: $neutral-color-wenge-brown;
+  padding-left: 20px;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  //width: 50%;
+  font-weight: normal;
+  color: $neutral-color-wenge-brown;
+}
+td {
+  width: 50%;
+  color: $primary-color-nutmeg;
+  font-weight: bold;
+}
+
+
+  tr {
+    border-bottom: 1px solid $neutral-color-light-grey;
+  }
+table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+.recipe {
+  @media (min-width: $breakpoint-tablet) {
+    background-color: white;
+    border-radius: 20px;
+    width: 60%;
+    padding-bottom:$padding;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: $margin * 2;
+  }
+  &__image-container {
+    @media (min-width: $breakpoint-tablet) {
+      display: block;
+      border-radius: 10px;
+      max-width: 100%;
+      padding-top: $padding;
+      padding-right: $padding;
+      padding-left: $padding;
+    }
+  }
+  &__image {
+    display: block;
+    width: 100%;
+    @media (min-width: $breakpoint-tablet) {
+      display: block;
+      border-radius: 10px;
+      max-width: 100%;
+    }
+  }
+
+  &__header {
+    padding: $padding;
+  }
+
+  &__title {
+    font-family: $font-family-young-serif;
+    font-size: 2rem;
+    margin: 0;
+  }
+  &__text {
+    font-family: $font-family-outfit;
+    color: $neutral-color-wenge-brown;
+    margin-bottom: $margin;
+    &--nutrition {
+      margin-bottom: 5px;
+    }
+  }
+
+  &__list {
+  }
+
+  &__orderedlist {
+  }
+
+  &__section {
+    &--preptime {
+      font-family: $font-family-outfit;
+      padding: $padding * 0.5;
+      background-color: $neutral-color-rose-white;
+      border-radius: 10px;
+      color: $primary-color-nutmeg;
+    }
+
+    &--ingredients {
+      font-family: $font-family-outfit;
+      padding-left: $padding;
+      padding-right: $padding;
+
+      color: $primary-color-nutmeg;
+    }
+
+    &--instructions {
+      font-family: $font-family-outfit;
+
+      padding-left: $padding;
+      padding-right: $padding;
+      color: $primary-color-nutmeg;
+    }
+    &--nutrition {
+      font-family: $font-family-outfit;
+      padding-left: $padding;
+      padding-right: $padding;
+    }
+  }
+
+  &__heading {
+    font-family: $font-family-young-serif;
+    margin: 0;
+    color: $primary-color-nutmeg;
+    font-size: 1.8rem;
+    &--preptime {
+      font-size: 1.15rem;
+      color: $primary-color-dark-raspberry;
+    }
+  }
+}
